@@ -18,5 +18,5 @@ youre also going to need to add this keybind to your userkeybinds.conf to make i
     bind = $mainMod CTRL SHIFT, B, exec, python $HOME/.config/ThemePicker/ThemePickerMain.py
 
 **warning**!
-**    i think that running it for the first time will replace the file that is currently being used as a wallpaper, so make  a copy of your current wallpaper just in case
-**
+i think that running it for the first time will replace the file that is currently being used as a wallpaper, so make  a copy of your current wallpaper just in case
+
