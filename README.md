@@ -6,6 +6,7 @@ just drag the files into your /.config/ file and everything should kind of work 
     EXCEPT NORD, NORD HAS TO BE $nordwallpaper
 i made it to use it with jakoolits hyprdots, its going to requiere the following commands to make the files executable
 
+    chmod +x ~/.config/ThemePicker/scripts/themepicker.sh
     chmod +x ~/.config/ThemePicker/scripts/wallpapergray.sh
     chmod +x ~/.config/ThemePicker/scripts/wallpapernord.sh
     chmod +x ~/.config/ThemePicker/scripts/wallpaperbeige.sh
@@ -16,7 +17,13 @@ youre also going to need to add this keybind to your userkeybinds.conf to make i
 
     #ThemePicker
     bind = $mainMod CTRL SHIFT, B, exec, python $HOME/.config/ThemePicker/ThemePickerMain.py
+and this ones to your windowrules to make it pop up in the center
+    
+    #ThemePicker
+    windowrule = float, title: ^(Choosee)$
+    windowrule = center, title: ^(Choosee)$
+    
 
 **warning**!
-i think that running it for the first time will replace the file that is currently being used as a wallpaper, so make  a copy of your current wallpaper just in case
+i think that running it for the first time will replace the file that is currently being used as a wallpaper, so make  a copy of your current wallpaper just in case, ill probably fix that someday
 
