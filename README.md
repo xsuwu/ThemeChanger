@@ -10,6 +10,5 @@ i made it to use it with jakoolits hyprdots, its going to requiere the following
 
 youre also going to need to add this keybind to your userkeybinds.conf to make it a lil bit more comfortable to use
 
-#ThemePicker
-
+    #ThemePicker
     bind = $mainMod CTRL SHIFT, B, exec, python $HOME/.config/ThemePicker/ThemePickerMain.py
