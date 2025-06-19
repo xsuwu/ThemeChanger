@@ -16,7 +16,7 @@ wallpaper="$HOME/.config/rofi/.current_wallpaper"
 scriptsluis="$HOME/.config/ThemePicker/scripts"
 nordicdarker="Nordic-darker"
 gruvboxdarker="Gruvbox-Dark-Medium"
-
+hyprlock_config="$HOME/.config/hypr/hyprlock.conf"
 
 #solo wallpaper y wallust, wallust es mala idea por los cambios de colores en wallust-hyprland.conf
 #set_wallpaper() {
@@ -42,8 +42,18 @@ hyprctl --batch "\
     keyword general:col.inactive_border $color20;\
     keyword general:gaps_out 5"
 
-
-
+    #hyprlock
+    HYPRLOCK_SOURCE="$HOME/.config/ThemePicker/beige-theme/hyprlock.conf"
+    if [ -f "$HYPRLOCK_SOURCE" ]; then
+        cp "$HYPRLOCK_SOURCE" "$hyprlock_config" ||{
+            echo "failed to copy $HYPRLOCK_SOURCE  to $hyprlock_config"
+            exit 1 
+        }
+        echo "Succesfully copied $HYPRLOCK_SOURCE to $hyprlock_config"
+    else
+        echo "file $HYPRLOCK_SOURCE not found"
+        exit 1
+fi
 
 # source y destino
 SOURCE="$HOME/.config/ThemePicker/beige-theme/wallust-hyprland.conf"
@@ -112,7 +122,24 @@ hyprctl --batch "\
     keyword general:col.inactive_border $color18;\
     keyword general:gaps_out 5"
 
+    #hyprlock
+    HYPRLOCK_SOURCE="$HOME/.config/ThemePicker/gray-theme/hyprlock.conf"
+    if [ -f "$HYPRLOCK_SOURCE" ]; then
+        cp "$HYPRLOCK_SOURCE" "$hyprlock_config" ||{
+            echo "failed to copy $HYPRLOCK_SOURCE  to $hyprlock_config"
+            exit 1 
+        }
+        echo "Succesfully copied $HYPRLOCK_SOURCE to $hyprlock_config"
+    else
+        echo "file $HYPRLOCK_SOURCE not found"
+        exit 1
+    fi
+
+
+
 $scriptsluis/wallpapergray.sh
+
+
 #wallust.conf source y destino
 SOURCE="$HOME/.config/ThemePicker/gray-theme/wallust-hyprland.conf"
 DEST="$HOME/.config/hypr/wallust/"
@@ -178,6 +205,20 @@ hyprctl --batch "\
     keyword general:col.inactive_border $color18;\
     keyword general:gaps_out 5"
 
+
+    #hyprlock
+    HYPRLOCK_SOURCE="$HOME/.config/ThemePicker/nord-theme/hyprlock.conf"
+    if [ -f "$HYPRLOCK_SOURCE" ]; then
+        cp "$HYPRLOCK_SOURCE" "$hyprlock_config" ||{
+            echo "failed to copy $HYPRLOCK_SOURCE  to $hyprlock_config"
+            exit 1 
+        }
+        echo "Succesfully copied $HYPRLOCK_SOURCE to $hyprlock_config"
+    else
+        echo "file $HYPRLOCK_SOURCE not found"
+        exit 1
+    fi
+
 $scriptsluis/wallpapernord.sh
 
 #wallust source yd estino
@@ -201,19 +242,19 @@ fi
 
 
 #rofi theme
-gray_theme="$HOME/.config/ThemePicker/gray-theme/rofi-theme/nord.rasi"
+nord_theme="$HOME/.config/ThemePicker/nord-theme/rofi-theme/nord.rasi"
 current_theme="$HOME/.config/rofi/config.rasi"
 
-    if [ -f "$gray_theme" ]; then
+    if [ -f "$nord_theme" ]; then
     
 
-        cp "$gray_theme" "$current_theme" || {
-        echo "could not switch to gray theme"
+        cp "$nord_theme" "$current_theme" || {
+        echo "could not switch to nord theme"
         exit 1
         } 
-        echo "switched to gray theme"
+        echo "switched to nord theme"
     else
-        echo "could not switch to gray theme, $gray_theme does nto exist"
+        echo "could not switch to nord theme, $nord_theme does nto exist"
         exit 1
     fi
 
