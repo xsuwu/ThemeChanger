@@ -1,6 +1,7 @@
 # ThemeChanger
-theme changer for hyprland
-just drag the ThemePicker folder into your /.config/ file, and the 2 themes from the theme folder into .themes, if you already have them theres no need, and everything should kind of work if you have the default jakoolit dot files, except for the being centered and floating part.
+i made this theme changer to work with  [JakooLit Hyprdots](https://github.com/JaKooLit/Hyprland-Dot).
+
+Technically, you just need to drag the ThemePicker folder into your /.config/ file, and the 2 themes from the theme folder into .themes, if you already have them theres no need, and everything should kind of work if you have the default dot files.
     Theres also a commented section in the themepicker.sh to use wallust colors for absolutely everything, but i couldnt get it to work as i wanted it, so you can use that if you wish, just comment the         $scriptsluis/wallpapertheme.sh and add a 
     
     set_wallpaper "$theme_wallpaper"
