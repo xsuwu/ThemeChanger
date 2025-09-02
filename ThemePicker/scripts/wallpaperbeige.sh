@@ -15,6 +15,22 @@ TERMINAL="kitty"
 SCRIPTSDIR="$HOME/.config/hypr/scripts"  
 IDIR="$HOME/.config/hypr/icons" 
 SWWW_PARAMS="--transition-type wipe --transition-fps 144 --transition-duration 2"
+CURRENT="$HOME/.config/rofi/.current_wallpaper"
+
+
+
+if [ -f "$WALLPAPER" ]; then
+    
+
+        cp "$WALLPAPER" "$CURRENT" || {
+        echo "could not cp the current wallpaper"
+        exit 1
+        } 
+        echo "current wallpaper changed"
+    else
+        echo "could not cp current wallpaper, $WALLPAPER does nto exist"
+        exit 1
+fi
 
 
 # creo que esto es el wallpaper

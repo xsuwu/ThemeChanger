@@ -21,7 +21,7 @@
 
 
 
-//@theme "~/.local/share/rofi/themes/luis-luis.rasi"
+//@theme "~/.config/rofi/themes/luis-luis.rasi"
 //@theme "~/.config/rofi/themes/KooL_style-2-Dark.rasi"
 //@theme "~/.config/rofi/themes/KooL_LonerOrZ.rasi"
 //@theme "~/.config/rofi/themes/KooL_style-5.rasi"
@@ -30,4 +30,4 @@
 //@theme "~/.config/rofi/themes/KooL_style-9.rasi"
 //@theme "~/.config/rofi/themes/KooL_style-7.rasi"
 //@theme "~/.config/rofi/themes/KooL_style-1.rasi"
-@theme "~/.config/rofi/themes/luis-luis.rasi"
+@theme "~/.config/rofi/themes/nord-style.rasi"
